@@ -51,7 +51,7 @@ function clickOnCell() {
       } else {
         if (currentPlayer === 1) {
           let img = document.createElement("img");
-          img.src = "../img/rond.png";
+          img.src = "./assets/img/rond.png";
           cell.appendChild(img);
           //file gamestate to check victory
           gameState[Number(coordinateXY[0])][Number(coordinateXY[1])] = [1];
@@ -60,7 +60,7 @@ function clickOnCell() {
           currentPlayer = 2;
         } else {
           let img2 = document.createElement("img");
-          img2.src = "../img/croix.png";
+          img2.src = "./assets/img/croix.png";
           cell.appendChild(img2);
           //file gamestate to check victory
           gameState[Number(coordinateXY[0])][Number(coordinateXY[1])] = [2];
@@ -198,10 +198,10 @@ function checkGameFull() {
 function drawArrow() {
   if (currentPlayer === 1 && secondTour) {
     imgPlayer1.src = "";
-    imgPlayer2.src = "../img/arrow.png";
+    imgPlayer2.src = "./assets/img/arrow.png";
   } else {
     imgPlayer2.src = "";
-    imgPlayer1.src = "../img/arrow.png";
+    imgPlayer1.src = "./assets/img/arrow.png";
   }
   secondTour = true;
 }
